@@ -8,11 +8,14 @@
 
 class App {
 private:
+	ServiceManager* serviceManager;
 public:
 	void run() {
 		// check if application is ran as administrator
 		elevate();
 		cleanup();
+		serviceManager = new ServiceManager();
+		startVanguard();
 	}
 
 	void cleanup() {
@@ -20,6 +23,10 @@ public:
 	}
 
 private:
+	void startVanguard() {
+		serviceManager->runService(L"vgc");
+	}
+
 	BOOL isElevated() {
 		BOOL IsElevated = FALSE;
 		DWORD dwError = ERROR_SUCCESS;
@@ -74,6 +81,9 @@ private:
 				if (dwError == ERROR_CANCELLED) throw std::runtime_error("Accept this next time");
 				throw std::runtime_error("Unknown error occured");
 			}
+
+			cleanup();
+			exit(0);
 		}
 	}
 };
