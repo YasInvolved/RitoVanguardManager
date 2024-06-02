@@ -7,7 +7,7 @@ When it does, the program disables riot vanguard end quits.
 
 ## How to use it
 1. Unpack zip archieve with executable and config file (VanguardManager.conf)
-2. if your riot client path differs from "C:\Riot Games\Riot Client\RiotClientServices.exe" then change it to match yours. It's a single-line file so you don't need to worry about complications.
+2. if your riot client path differs from `C:\Riot Games\Riot Client\RiotClientServices.exe` then change it to match yours. It's a single-line file so you don't need to worry about complications.
 3. (optional) create shortcut to application and place it in the desktop
 4. just run the app
 
