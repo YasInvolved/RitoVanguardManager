@@ -8,6 +8,7 @@ When it does, the program disables riot vanguard end quits.
 ## TODO
 - Comments in code (it's hardly readable)
 - Valorant and other riot games support
+- Better config (for now it's a single line file with path to riot client)
 - Configurator (automatically search for riot client etc.)
 - Maybe optimization
 
