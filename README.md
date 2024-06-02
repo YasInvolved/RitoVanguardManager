@@ -1,4 +1,4 @@
-# RitoVanguardManager
+# RitoVanguardManager (yeah "Rito" is on purpose 😉)
 Not really a simple program for enabling and disabling vanguard automatically so you don't need to worry about potential spyies on your computer.
 
 ## How does it work
