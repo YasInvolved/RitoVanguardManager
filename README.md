@@ -21,3 +21,6 @@ When it does, the program disables riot vanguard end quits.
 
 ## Contributions
 Any contributions are always welcome. I think some people may consider this software as useful, so if you know C++ and you can write WinAPI code you can add something.
+
+## Current state
+Well, for now I won't be contributing to the project since I have other projects to advance in. Ofc if I find the time and need to work on this I'll do that.
