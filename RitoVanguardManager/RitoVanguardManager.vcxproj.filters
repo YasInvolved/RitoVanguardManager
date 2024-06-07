@@ -21,6 +21,9 @@
     <ClCompile Include="ServiceManager.h">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\gh\wsjcpp-yaml\src\wsjcpp_yaml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -33,6 +36,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WinAPIException.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\gh\wsjcpp-yaml\src\wsjcpp_yaml.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

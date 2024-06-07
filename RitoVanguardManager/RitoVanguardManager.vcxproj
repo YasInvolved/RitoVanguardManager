@@ -143,10 +143,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="D:\gh\wsjcpp-yaml\src\wsjcpp_yaml.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ServiceManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\gh\wsjcpp-yaml\src\wsjcpp_yaml.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="tray.h" />

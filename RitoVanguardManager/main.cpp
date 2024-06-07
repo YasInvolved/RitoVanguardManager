@@ -11,16 +11,18 @@
 #include "ServiceManager.h"
 #include "tray.h"
 #include "WinAPIException.h"
+#include "wsjcpp_yaml.h"
 
 // just to not forget: ".../RiotClientServices.exe" --launch-product=league_of_legends --launch-patchline=live
 
 constexpr wchar_t VANGUARD_SERVICE_NAME[] = L"vgc";
-constexpr wchar_t CLIENT_ARGS[] = L"--launch-product=league_of_legends --launch-patchline=live";
+constexpr wchar_t LEAGUE_CLIENT_ARGS[] = L"--launch-product=league_of_legends --launch-patchline=live";
+constexpr wchar_t VALORANT_CLIENT_ARGS[] = L"--launch-product=valorant --launch-patchline=live";
 
 namespace VanguardManager {
 	class App {
 	private:
-		std::unique_ptr<ServiceManager> serviceManager; // service manager requires to be started later cuz it requires administrator permissions
+		std::unique_ptr<ServiceManager> serviceManager; // service manager requires to be initialized later cuz it requires administrator permissions
 		std::unique_ptr<TrayIcon> trayIcon = std::make_unique<TrayIcon>();
 		std::wstring executablePath = L"";
 	public:
@@ -53,7 +55,7 @@ namespace VanguardManager {
 
 		void startRiotClient() {
 			std::wstringstream cmd;
-			cmd << L'\"' << executablePath << L'\"' << CLIENT_ARGS;
+			cmd << L'\"' << executablePath << L'\"' << LEAGUE_CLIENT_ARGS;
 			PROCESS_INFORMATION pi;
 			STARTUPINFO si = { sizeof(si) };
 			BOOL result = CreateProcessW(
